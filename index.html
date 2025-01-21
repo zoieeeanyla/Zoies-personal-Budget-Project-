@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title Page - Zoie Schneider</title>
+    <title>Home - Zoie Schneider</title>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Reset margins and padding */
         * {
@@ -14,69 +16,83 @@
 
         /* Body styling */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Raleway', sans-serif;
             background-color: #f8f8f8;
+            color: #333;
             text-align: center;
+            padding: 20px;
         }
 
-        /* Title Page Styling */
-        #title-page {
-            background-color: #ffebf2; /* Soft pink background */
-            height: 100vh; /* Full screen height */
+        /* Navigation bar styling */
+        .navbar {
+            background-color: #ff66b2;
+            padding: 15px;
             display: flex;
             justify-content: center;
-            align-items: center;
-        }
-
-        /* Container for Title Page Content */
-        .container {
-            text-align: center;
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
+            gap: 25px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Title Styling */
-        .title {
-            font-size: 36px;
-            color: #ff66b2; /* Bold pink color */
-            font-family: 'Georgia', serif;
-            margin-bottom: 20px;
-        }
-
-        /* Name Styling */
-        .name {
-            font-size: 28px;
-            color: #ff66b2;
-            font-weight: bold;
-            font-family: 'Georgia', serif;
-            margin-bottom: 15px;
-        }
-
-        /* Course and Teacher Info Styling */
-        .course, .teacher, .date {
+        .navbar a {
+            color: white;
+            text-decoration: none;
             font-size: 18px;
-            color: #333;
-            margin-bottom: 10px;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
         }
 
-        /* Submission Date Styling */
-        .date {
-            font-style: italic;
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Home Page Content */
+        .content {
+            margin-top: 40px;
+        }
+
+        .content h1 {
+            font-size: 42px;
+            color: #ff66b2;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        .content p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <!-- Title Page Section -->
-    <section id="title-page">
-        <div class="container">
-            <h1 class="title">Personal Budget Project</h1>
-            <h2 class="name">Zoie Schneider</h2>
-            <h3 class="course">Honors Economics</h3>
-            <p class="teacher">Teacher: Mr. Fenn</p>
-            <p class="date">Submission Date: May 16, 2025</p>
-        </div>
-    </section>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="table-of-contents.html">Table of Contents</a>
+        <a href="job-salary.html">Job & Salary</a>
+        <a href="reflection.html">Reflection</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to Zoie's Personal Budget Project</h1>
+        <p>
+            Explore and manage your personal budget journey! Use the navigation bar above to explore different sections and 
+            complete your activities step by step.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Zoie Schneider | Honors Economics Project
+    </footer>
 </body>
 </html>
