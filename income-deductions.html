@@ -64,12 +64,41 @@
             line-height: 1.6;
         }
 
-        .content ul {
+        .pay-stub {
             text-align: left;
             max-width: 800px;
             margin: 0 auto;
+            background-color: white;
             padding: 20px;
-            list-style-type: decimal;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .pay-stub h2 {
+            text-align: center;
+            color: #ff66b2;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .pay-stub table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .pay-stub table, .pay-stub th, .pay-stub td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .pay-stub th {
+            background-color: #ff66b2;
+            color: white;
+            text-align: left;
+        }
+
+        .pay-stub td {
+            text-align: right;
         }
 
         /* Footer Styling */
@@ -94,25 +123,69 @@
         <h1>2. Income & Deductions</h1>
 
         <p>
-            In this section, we calculate all deductions from your monthly gross pay to determine your net pay. This includes federal taxes, state taxes, FICA taxes, Medicare, health insurance, life insurance, and retirement savings.
+            This page focuses on the deductions subtracted from your gross pay to calculate your net pay. Deductions include federal and state taxes, FICA taxes, Medicare, health insurance, life insurance, and retirement contributions.
         </p>
 
-        <h2>Calculation Details</h2>
-        <ul>
-            <li><strong>Federal Taxes:</strong> Annual Salary = $55,611, Tax Rate = 22%, Yearly Tax = $12,234.42, Monthly Tax = $1,019.54</li>
-            <li><strong>State Taxes (Georgia):</strong> Tax Rate = 5.75%, Yearly Tax = $3,196.58, Monthly Tax = $266.38</li>
-            <li><strong>FICA (Social Security):</strong> 6.2% of Gross Pay = $287.32</li>
-            <li><strong>Medicare:</strong> 1.45% of Gross Pay = $67.20</li>
-            <li><strong>Retirement Savings:</strong> 5% of Gross Pay = $231.71</li>
-            <li><strong>Health Insurance:</strong> Estimated Monthly Cost = $200.00</li>
-            <li><strong>Life Insurance:</strong> Estimated Monthly Cost = $50.00</li>
-        </ul>
+        <div class="pay-stub">
+            <h2>Pay Stub Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gross Pay</td>
+                        <td>$4,634.25</td>
+                    </tr>
+                    <tr>
+                        <td>Federal Tax</td>
+                        <td>$1,019.53</td>
+                    </tr>
+                    <tr>
+                        <td>State Tax (Georgia)</td>
+                        <td>$92.53</td>
+                    </tr>
+                    <tr>
+                        <td>FICA (6.2%)</td>
+                        <td>$287.32</td>
+                    </tr>
+                    <tr>
+                        <td>Medicare (1.45%)</td>
+                        <td>$67.20</td>
+                    </tr>
+                    <tr>
+                        <td>Health Insurance</td>
+                        <td>$200.00</td>
+                    </tr>
+                    <tr>
+                        <td>Life Insurance</td>
+                        <td>$20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Retirement (5%)</td>
+                        <td>$231.71</td>
+                    </tr>
+                    <tr>
+                        <th>Total Deductions</th>
+                        <th>$1,918.29</th>
+                    </tr>
+                    <tr>
+                        <th>Net Pay</th>
+                        <th>$2,715.96</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        <h2>Net Pay</h2>
         <p>
-            <strong>Gross Pay:</strong> $4,634.25<br>
-            <strong>Total Deductions:</strong> $2,122.15<br>
-            <strong>Net Pay:</strong> $2,512.10
+            The deductions are based on your gross pay of $4,634.25. Benefits such as health insurance and life insurance are included in the deductions. Additionally, a 5% retirement contribution is calculated to ensure savings for the future.
+        </p>
+
+        <p>
+            Always consider purchasing personal life insurance outside of your job to maintain coverage even when changing employers.
         </p>
     </div>
 
