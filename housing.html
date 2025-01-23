@@ -17,7 +17,7 @@
         /* Body styling */
         body {
             font-family: 'Raleway', sans-serif;
-            background-color: #fef5f8;
+            background-color: #fff5f8;
             color: #333;
             text-align: center;
             padding: 20px;
@@ -59,20 +59,21 @@
             font-weight: 700;
         }
 
-        .details, .attachments {
+        .details, .attachments, .budget-sheet {
             text-align: left;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
             background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
-        .details h2, .attachments h2 {
+        .details h2, .attachments h2, .budget-sheet h2 {
             color: #ff66b2;
             font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 15px;
         }
 
         .details ul {
@@ -82,6 +83,7 @@
 
         .details ul li {
             margin-bottom: 10px;
+            font-size: 18px;
         }
 
         .attachments a {
@@ -89,14 +91,31 @@
             background-color: #ff66b2;
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+
+        .attachments a:hover {
+            background-color: #ff3385;
+        }
+
+        .budget-sheet a {
+            display: inline-block;
+            background-color: #ff66b2;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
             font-size: 16px;
             font-weight: 600;
             transition: background-color 0.3s;
         }
 
-        .attachments a:hover {
+        .budget-sheet a:hover {
             background-color: #ff3385;
         }
 
@@ -126,7 +145,7 @@
         <div class="details">
             <h2>Housing Details</h2>
             <p><strong>Location:</strong> Retreat at Greenbriar, 3000 Continental Colony Parkway SW, Atlanta, GA 30331</p>
-            <p><strong>Rent:</strong> $1,000 per month</p>
+            <p><strong>Rent:</strong> $1,175 per month</p>
             <p><strong>Services Included:</strong></p>
             <ul>
                 <li>Electricity (additional cost)</li>
@@ -138,8 +157,16 @@
 
         <div class="attachments">
             <h2>Attachments</h2>
-            <p>Click below to view the apartment brochure and floor plan:</p>
-            <a href="retreat-greenbriar.pdf" target="_blank">View Apartment Details</a>
+            <p>Click below to view the apartment ad and application form:</p>
+            <a href="retreat-ad.pdf" target="_blank">View Apartment Ad</a>
+            <br><br>
+            <a href="retreat-application.pdf" target="_blank">View Application Form</a>
+        </div>
+
+        <div class="budget-sheet">
+            <h2>Budget Sheet</h2>
+            <p>The monthly rent of $1,175 has been added to the budget sheet. Click below to view the updated budget sheet:</p>
+            <a href="zoies%20Monthly%20Budget%20Report%20Sheet%20-%20Sheet1.pdf" target="_blank">View Budget Sheet</a>
         </div>
     </div>
 
