@@ -17,7 +17,7 @@
         /* Body styling */
         body {
             font-family: 'Raleway', sans-serif;
-            background-color: #f8f8f8;
+            background-color: #fff5f8;
             color: #333;
             text-align: center;
             padding: 20px;
@@ -31,6 +31,7 @@
             justify-content: center;
             gap: 25px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         .navbar a {
@@ -51,54 +52,88 @@
         }
 
         .content h1 {
-            font-size: 42px;
+            font-size: 48px;
             color: #ff66b2;
             margin-bottom: 20px;
             font-family: 'Playfair Display', serif;
-            font-weight: 600;
+            font-weight: 700;
         }
 
-        .content p {
-            font-size: 20px;
-            margin-bottom: 20px;
-            line-height: 1.6;
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .pay-stub {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
+        .info-bubble {
             background-color: white;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .pay-stub h2 {
-            text-align: center;
-            color: #ff66b2;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .pay-stub table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        .pay-stub table, .pay-stub th, .pay-stub td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        .pay-stub th {
-            background-color: #ff66b2;
-            color: white;
+            width: 280px;
+            border-radius: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             text-align: left;
         }
 
-        .pay-stub td {
-            text-align: right;
+        .info-bubble h2 {
+            font-size: 22px;
+            color: #ff66b2;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 10px;
+        }
+
+        .info-bubble p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .chart-section {
+            margin-top: 40px;
+        }
+
+        .chart-section table {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .chart-section th, .chart-section td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .chart-section th {
+            background-color: #ff66b2;
+            color: white;
+        }
+
+        .chart-section td {
+            background-color: white;
+        }
+
+        .budget-section {
+            margin-top: 40px;
+        }
+
+        .budget-section a {
+            display: inline-block;
+            background-color: #ff66b2;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .budget-section a:hover {
+            background-color: #ff3385;
         }
 
         .source {
@@ -137,88 +172,88 @@
     <div class="content">
         <h1>2. Income & Deductions</h1>
 
-        <p>
-            This page focuses on the deductions subtracted from the gross pay to calculate your net pay. Deductions include federal and state taxes, FICA taxes, Medicare, health insurance, life insurance, and retirement contributions. Gross pay is before taxes and Net pay is what you get after.
-        </p>
+        <div class="info-section">
+            <div class="info-bubble">
+                <h2>Federal Taxes</h2>
+                <p>Based on a salary of $55,611 per year, the federal tax rate is 22%. This means $733.33 is deducted from your monthly income for federal taxes.</p>
+            </div>
 
-        <div class="pay-stub">
-            <h2>Pay Stub Summary</h2>
+            <div class="info-bubble">
+                <h2>State Taxes</h2>
+                <p>Living in Georgia, the state tax rate is 5.75%, equating to a monthly deduction of $266.80 from your salary.</p>
+            </div>
+
+            <div class="info-bubble">
+                <h2>FICA Taxes</h2>
+                <p>FICA includes Social Security at 6.2% and Medicare at 1.45%. This results in a combined monthly deduction of $368.99.</p>
+            </div>
+
+            <div class="info-bubble">
+                <h2>Retirement Savings</h2>
+                <p>Contributing 5% of your salary to a 401(k) retirement plan deducts $231.42 from your monthly income.</p>
+            </div>
+
+            <div class="info-bubble">
+                <h2>Health & Life Insurance</h2>
+                <p>Health insurance costs $200 per month, while life insurance adds another $25, totaling $225.</p>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2>Income & Deductions Breakdown</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Description</th>
-                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Monthly Amount</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Gross Pay</td>
+                        <td>Gross Monthly Income</td>
                         <td>$4,634.25</td>
                     </tr>
                     <tr>
-                        <td>Federal Tax</td>
-                        <td>$1,019.53</td>
+                        <td>Federal Taxes</td>
+                        <td>-$1,019.53</td>
                     </tr>
                     <tr>
-                        <td>State Tax (Georgia)</td>
-                        <td>$92.53</td>
+                        <td>State Taxes</td>
+                        <td>-$266.59</td>
                     </tr>
                     <tr>
-                        <td>FICA (6.2%)</td>
-                        <td>$287.32</td>
+                        <td>FICA Taxes</td>
+                        <td>-287.32</td>
                     </tr>
                     <tr>
-                        <td>Medicare (1.45%)</td>
-                        <td>$67.20</td>
+                        <td>Retirement Savings</td>
+                        <td>-$231.42</td>
                     </tr>
                     <tr>
-                        <td>Health Insurance</td>
-                        <td>$200.00</td>
+                        <td>HealthInsurance</td>
+                        <td>-$200.00</td>
                     </tr>
                     <tr>
                         <td>Life Insurance</td>
-                        <td>$20.00</td>
-                    </tr>
+                        <td>-$20.00</td>
+                     </tr>
                     <tr>
-                        <td>Retirement (5%)</td>
-                        <td>$231.71</td>
-                    </tr>
-                    <tr>
-                        <th>Total Deductions</th>
-                        <th>$1,918.29</th>
-                    </tr>
-                    <tr>
-                        <th>Net Pay</th>
-                        <th>$2,715.96</th>
+                        <th>Net Monthly Income</th>
+                        <th>$2,808.71</th>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2>Employee Benefits at the CDC</h2>
-        <p>
-            The Centers for Disease Control and Prevention (CDC) offers a comprehensive benefits package to its employees, including:
-        </p>
-        <ul>
-            <li><strong>Health Insurance:</strong> The CDC provides comprehensive medical benefits, including health insurance options. <a href="https://jobs.cdc.gov/benefits" target="_blank">CDC Jobs</a></li>
-            <li><strong>Life Insurance:</strong> Employees have access to life insurance benefits through the Federal Employees' Group Life Insurance (FEGLI) program. <a href="https://jobs.cdc.gov/benefits" target="_blank">CDC Jobs</a></li>
-            <li><strong>Retirement Savings:</strong> The CDC participates in the Federal Employees Retirement System (FERS), which includes:
-                <ul>
-                    <li>Basic Benefit Plan: A pension plan providing annuity payments upon retirement.</li>
-                    <li>Social Security: Contributions to Social Security for additional retirement benefits.</li>
-                    <li>Thrift Savings Plan (TSP): A retirement savings and investment plan similar to a 401(k), allowing employees to contribute a portion of their salary. <a href="https://www.opm.gov" target="_blank">U.S. Office of Personnel Management</a></li>
-                </ul>
-            </li>
-            <li><strong>Employer Match:</strong> The CDC offers a generous employer match of 10% if you contribute at least 2% of your earnings after three months of service and after the attainment of age 21. <a href="https://www.tiaa.org" target="_blank">TIAA</a></li>
-            <li><strong>Additional Benefits:</strong>
-                <ul>
-                    <li>Paid Leave: Includes vacation, sick leave, and other leave programs.</li>
-                    <li>Flexible Work Schedules: Options for flexible work arrangements.</li>
-                    <li>Employee Assistance Programs: Support services for personal and professional challenges.</li>
-                    <li>Wellness and Fitness Programs: Resources to support employee health and well-being.</li>
-                </ul>
-            </li>
-        </ul>
+        <div class="budget-section">
+            <h2>Updated Budget</h2>
+            <p>All deductions have been factored into the updated budget sheet. Click below to view it:</p>
+            <a href="zoies%20Monthly%20Budget%20Report%20Sheet%20-%20Sheet2.pdf" target="_blank">View Budget Sheet</a>
+        </div>
 
-        <p class="source">
-            Sources: <a href="https://jobs.cdc.gov/benefits" target="_blank">CDC Jobs</a> <a href="https://www
+        <div class="source">
+            Sources: 
+            <a href="https://www.irs.gov/" target="_blank">
+                <footer>
+    &copy; 2025 Zoie Schneider | Honors Economics Project
+</footer>
