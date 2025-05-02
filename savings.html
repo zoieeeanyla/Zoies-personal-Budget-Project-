@@ -1,99 +1,163 @@
-<style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff0f5;
-    color: #333;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Plan - Zoie Schneider</title>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  .savings-container {
-    background-color: #ffe6f0;
-    border-radius: 25px;
-    padding: 30px;
-    max-width: 800px;
-    margin: auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 2px solid #f8bbd0;
-  }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #fef5f8;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
 
-  .savings-header {
-    font-size: 2em;
-    color: #e91e63;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 25px;
-  }
+        .navbar {
+            background-color: #ff66b2;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
 
-  .savings-section {
-    margin-bottom: 20px;
-  }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+        }
 
-  .savings-section h3 {
-    font-size: 1.3em;
-    color: #9c27b0;
-    margin-bottom: 10px;
-  }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
 
-  .savings-section p {
-    font-size: 1em;
-    margin-left: 10px;
-  }
+        .content {
+            margin-top: 40px;
+        }
 
-  .budget-link {
-    background-color: #f06292;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
-  }
+        .content h1 {
+            font-size: 48px;
+            color: #ff66b2;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
 
-  .budget-link:hover {
-    background-color: #ec407a;
-  }
-</style>
+        .savings-container {
+            background-color: #ffe6f0;
+            border-radius: 25px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 2px solid #f8bbd0;
+            text-align: left;
+        }
 
-<div class="savings-container">
-  <div class="savings-header">💰 Monthly Savings Plan</div>
+        .savings-container h3 {
+            font-size: 1.3em;
+            color: #9c27b0;
+            margin-top: 20px;
+            font-family: 'Playfair Display', serif;
+        }
 
-  <div class="savings-section">
-    <h3>Monthly Gross Salary:</h3>
-    <p>$4,634.25 (based on a $55,611 annual salary at CDC)</p>
-  </div>
+        .savings-container p {
+            font-size: 1em;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
 
-  <div class="savings-section">
-    <h3>Recommended Savings (10%):</h3>
-    <p>$463.43/month</p>
-  </div>
+        .savings-container ul {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
 
-  <div class="savings-section">
-    <h3>🏦 Personal Savings Account</h3>
-    <p><strong>Bank:</strong> Capital One 360 Performance Savings<br>
-       <strong>Interest Rate:</strong> 4.25% APY (as of May 2025)<br>
-       <strong>Why:</strong> Offers no fees, easy access, and a strong interest rate.</p>
-  </div>
+        .budget-link {
+            background-color: #f06292;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 25px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
 
-  <div class="savings-section">
-    <h3>📈 Retirement Savings</h3>
-    <p><strong>Retirement Account:</strong> Roth IRA<br>
-       <strong>Employer Contributions:</strong> CDC matches 5% to Thrift Savings Plan (TSP)<br>
-       <strong>My Monthly Contribution:</strong> $100</p>
-  </div>
+        .budget-link:hover {
+            background-color: #ec407a;
+        }
 
-  <div class="savings-section">
-    <h3>🌟 Financial Goals</h3>
-    <p>✔️ Save $1,000 for emergencies ("Life Unexpected")<br>
-       ✔️ Build up 1 month of living expenses saved<br>
-       ✔️ Eventually have 3 months saved<br>
-       ✔️ Grow retirement contributions gradually</p>
-  </div>
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="table-of-contents.html">Table of Contents</a>
+        <a href="job-salary.html">Job & Salary</a>
+        <a href="income-deductions.html">Income & Deductions</a>
+        <a href="banking.html">Banking</a>
+    </nav>
 
-  <div class="savings-section">
-    <h3>📊 View My Full Budget Sheet</h3>
-    <a class="budget-link" href="https://docs.google.com/your-budget-sheet-link" target="_blank">
-      ➡️ View Updated Budget Sheet (PDF)
-    </a>
-  </div>
-</div>
+    <!-- Main Content -->
+    <div class="content">
+        <h1>💰 Monthly Savings Plan</h1>
+
+        <div class="savings-container">
+            <h3>Monthly Gross Salary:</h3>
+            <p>$4,634.25 (based on a $55,611 annual salary at CDC)</p>
+
+            <h3>Recommended Savings (10%):</h3>
+            <p>$463.43/month</p>
+
+            <h3>🏦 Personal Savings Account</h3>
+            <p><strong>Bank:</strong> Capital One 360 Performance Savings<br>
+            <strong>Interest Rate:</strong> 4.25% APY (as of May 2025)<br>
+            <strong>Why:</strong> Offers no fees, easy access, and a strong interest rate.</p>
+
+            <h3>📈 Retirement Savings</h3>
+            <p><strong>Retirement Account:</strong> Roth IRA<br>
+            <strong>Employer Contributions:</strong> CDC matches 5% to Thrift Savings Plan (TSP)<br>
+            <strong>My Monthly Contribution:</strong> $100</p>
+
+            <h3>🌟 Financial Goals</h3>
+            <ul>
+                <li>Save $1,000 for emergencies ("Life Unexpected")</li>
+                <li>Build up 1 month of living expenses saved</li>
+                <li>Eventually have 3 months saved</li>
+                <li>Grow retirement contributions gradually</li>
+            </ul>
+
+            <h3>📊 View My Full Budget Sheet</h3>
+            <a class="budget-link" href="https://docs.google.com/your-budget-sheet-link" target="_blank">
+                ➡️ View Updated Budget Sheet (PDF)
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Zoie Schneider | Stockbridge High School
+    </footer>
+</body>
+</html>
